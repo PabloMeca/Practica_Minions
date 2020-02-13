@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "AgregarEvaluaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Evaluaciones</h2>
+
+<table style="width: 50%">
+
+    @* Formulario que manda parametros de insertar al controlador *@
+    @using (Html.BeginForm("InsertarEvaluaciones", "Evaluaciones", FormMethod.Post))
+    {
+        <tr>
+            <td align="left">
+                Nombre de la evaluación:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtNombre" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Descripción:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtDescripcion" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Cantidad de calificaciones:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtCantidad" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Insertar Evaluación</button>
+            </td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,43 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Destino>
+
+@{
+    ViewBag.Title = "ModificarDestino";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modificar Destino</h2>
+
+<table>
+    @using (Html.BeginForm("ActualizarDestino", "Vuelos", FormMethod.Post))
+    {
+        <tr>
+            <td align="left">
+                Código:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtCodigo" class="form-control" value="@Model[0].codigoDestino" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Destino Salida:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtDestinoSalida" class="form-control" value="@Model[0].destinoSalida"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Destino Llegada:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtDestinoLlegada" class="form-control" value="@Model[0].destinoLlegada"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Modificar Destino</button>
+            </td>
+        </tr>
+    }
+</table>

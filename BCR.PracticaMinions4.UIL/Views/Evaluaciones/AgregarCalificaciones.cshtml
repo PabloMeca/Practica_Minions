@@ -1,0 +1,63 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Evaluacion>
+
+@{
+    ViewBag.Title = "AgregarCalificaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Calificaciones</h2>
+
+<table style="width: 50%">
+
+    @* Formulario que manda parametros de insertar al controlador *@
+    @using (Html.BeginForm("InsertarCalificaciones", "Evaluaciones", FormMethod.Post))
+    {
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Evaluación:</h6>
+            </td>
+            <td style="width: 40%">
+                <select id="optEvaluaciones" name="optEvaluaciones" class="form-control">
+                    <option value="0">Seleccione una evaluación</option>
+                    @{
+                        foreach (var evaluacion in Model)
+                        {
+                            <option value="@evaluacion.codigoEvaluacion">@evaluacion.codigoEvaluacion - @evaluacion.nombre</option>
+                        }
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Cédula:</h6>
+            </td>
+            <td style="width: 40%">
+                <input type="text" name="txtCedula" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Calificación:</h6>
+            </td>
+            <td style="width: 40%">
+                <select id="optCalificacion" name="optCalificacion" class="form-control">
+                    <option value="0">Seleccione una calificación</option>
+                    @{
+                        for (var i = 1; i < 11; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Insertar Calificación</button>
+            </td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,57 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Vuelo>
+
+@{
+    ViewBag.Title = "Vuelos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Vuelos</h2>
+<table style="width: 100%">
+    <tr>
+        <td style="width: 80%">
+        </td>
+        <td style="width: 12%">
+            <button type="button" class="btn btn-success" onclick="location.href='/Vuelos/AgregarVuelos'">Agregar Vuelo</button>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Destino</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Fecha de salida</th>
+            <th scope="col">Modificar</th>
+            <th scope="col">Reservas</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var vuelo in Model)
+            {
+                <tr>
+                    <th scope="col">@vuelo.codigoVuelo</th>
+                    <th scope="col">@vuelo.destinos</th>
+                    <th scope="col">@vuelo.capacidad</th>
+                    <th scope="col">@vuelo.fechaSalida</th>
+                    <th>
+                        <button type="button" class="btn btn-primary"
+                                onclick="location.href='@Url.Action("ModificarVuelo", "Vuelos",
+                            new { idVuelo = vuelo.codigoVuelo })';return false;">
+                            Modificar
+                        </button>
+                    </th>
+                    <th>
+                        <button type="button" class="btn btn-primary"
+                                onclick="location.href='@Url.Action("Reservas", "Reports",
+                            new { idVuelo = vuelo.codigoVuelo })';return false;">
+                            Ver Reporte reservas
+                        </button>
+                    </th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

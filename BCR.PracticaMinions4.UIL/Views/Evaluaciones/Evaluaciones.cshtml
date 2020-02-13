@@ -1,0 +1,43 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Evaluacion>
+
+@{
+    ViewBag.Title = "Evaluaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Evaluaciones</h2>
+@* Boton donde agrega las evaluaciones *@
+<table style="width: 100%">
+    <tr>
+        <td style="width: 80%">
+        </td>
+        <td style="width: 14%">
+            <button type="button" class="btn btn-success" onclick="location.href='/Evaluaciones/AgregarEvaluaciones'">Agregar Evaluación</button>
+        </td>
+    </tr>
+</table>
+
+@* Tabla en la se muestra la lista de evaluaiones *@
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Cantidad de calificaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var evaluacion in Model)
+            {
+                <tr>
+                    <th scope="col">@evaluacion.codigoEvaluacion</th>
+                    <th scope="col">@evaluacion.nombre</th>
+                    <th scope="col">@evaluacion.descripcion</th>
+                    <th scope="col">@evaluacion.cantidadCalificaciones</th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

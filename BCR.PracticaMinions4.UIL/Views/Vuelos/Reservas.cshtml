@@ -1,0 +1,53 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Reserva>
+
+@{
+    ViewBag.Title = "Reservas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reservas</h2>
+
+<table style="width: 100%">
+    <tr>
+        <td style="width: 80%" align="right">
+        </td>
+        <td style="width: 12%">
+            <button type="button" class="btn btn-success" onclick="location.href='/Vuelos/AgregarReservas'">Agregar Reserva</button>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Vuelo</th>
+            <th scope="col">Salida del vuelo</th>
+            <th scope="col">Nombre del Cliente</th>
+            <th scope="col">Cantidad fumadores</th>
+            <th scope="col">Cantidad no fumadores</th>
+            <th scope="col">Cancelar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var reserva in Model)
+            {
+                <tr>
+                    <th scope="col">@reserva.codigoReserva</th>
+                    <th scope="col">@reserva.destinos</th>
+                    <th scope="col">@reserva.fechaSalida</th>
+                    <th scope="col">@reserva.nombreCliente</th>
+                    <th scope="col">@reserva.cantidadFumadores</th>
+                    <th scope="col">@reserva.cantidadNoFumadores</th>
+                    <th>
+                        <button type="button" class="btn btn-danger"
+                                onclick="location.href='@Url.Action("CancelarReservas", "Vuelos",
+                            new { idReserva = reserva.codigoReserva })';return false;">
+                            Cancelar
+                        </button>
+                    </th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

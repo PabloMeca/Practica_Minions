@@ -1,0 +1,10 @@
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.DAL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.DAL.pdb
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.ETL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.LIL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.ETL.pdb
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\bin\Debug\BCR.PracticaMinions4.LIL.pdb
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\obj\Debug\BCR.PracticaMinions4.DAL.csprojAssemblyReference.cache
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\obj\Debug\BCR.PracticaMinions4.DAL.csproj.CopyComplete
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\obj\Debug\BCR.PracticaMinions4.DAL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.DAL\obj\Debug\BCR.PracticaMinions4.DAL.pdb

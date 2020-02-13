@@ -1,0 +1,66 @@
+﻿@model BCR.PracticaMinions4.UIL.Controllers.ViewModel
+
+@{
+    ViewBag.Title = "ModificarVuelo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modificar Vuelo</h2>
+
+<table style="width: 35%">
+    @using (Html.BeginForm("ActualizarVuelo", "Vuelos", FormMethod.Post))
+    {
+        <tr>
+            <td align="left">
+                Código:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtCodigoVuelo" class="form-control" value="@Model.listaVuelos[0].codigoVuelo" readonly/>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Capacidad:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtCapacidad" class="form-control" value="@Model.listaVuelos[0].capacidad" />
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Fecha:
+            </td>
+            <td style="width: 50%">
+                <input type="datetime-local" name="txtFecha" class="form-control" value="@Model.listaVuelos[0].fechaSalida.ToString("yyyy-MM-dd HH:mm:ss").Replace(' ','T')">
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Destinos:
+            </td>
+            <td style="width: 50%">
+                <select name="optDestinos" class="form-control">
+                    @{
+                        foreach (var destino in Model.listaDestinos)
+                        {
+                            if (destino.codigoDestino == @Model.listaVuelos[0].codigoDestino)
+                            {
+                                <option value="@destino.codigoDestino" selected>@destino.destinos</option>
+                            }
+                            else
+                            {
+                                <option value="@destino.codigoDestino">@destino.destinos</option>
+                            }
+
+                        }
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Modificar Vuelo</button>
+            </td>
+        </tr>
+    }
+</table>

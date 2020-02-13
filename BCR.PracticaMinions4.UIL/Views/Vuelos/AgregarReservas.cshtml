@@ -1,0 +1,96 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Vuelo>
+@{
+    ViewBag.Title = "AgregarReservas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Reservas</h2>
+<table style="width: 100%">
+    <tr>
+        <td style="width: 25%" align="left">
+            <h6 id="lblFumadores">Asientos disponibles para fumadores:</h6>
+        </td>
+        <td style="width: 30%" align="left">
+            <label id="lblDisponiblesFumadores">(Seleccione un vuelo)</label>
+        </td>
+        <td style="width: 27%" align="left">
+            <h6 id="lblNoFumadores">Asientos disponibles para no fumadores:</h6>
+        </td>
+        <td style="width: 80%" align="left">
+            <label id="lblDisponiblesNoFumadores">(Seleccione un vuelo)</label>
+        </td>
+    </tr>
+    <tr>
+    </tr>
+</table>
+<br />
+<table style="width: 50%">
+    @using (Html.BeginForm("InsertarReservas", "Vuelos", FormMethod.Post))
+    {
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Nombre del cliente:</h6>
+            </td>
+            <td style="width: 40%">
+                <input type="text" name="txtNombre" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Cantidad de asientos de fumadores:</h6>
+            </td>
+            <td style="width: 40%">
+                <input type="text" name="txtFumadores" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Cantidad de asientos de no fumadores:</h6>
+            </td>
+            <td style="width: 40%">
+                <input type="text" name="txtNofumadores" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 50%">
+                <h6>Vuelo:</h6>
+            </td>
+            <td style="width: 40%">
+                <select id="optVuelos" name="optVuelos" class="form-control" onchange="cargarDisponibles()">
+                    <option value="0">Seleccione un vuelo</option>
+                    @{
+                        foreach (var vuelo in Model)
+                        {
+                            <option value="@vuelo.codigoVuelo">@vuelo.destinos - @vuelo.fechaSalida</option>
+                        }
+                    }
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Insertar Reserva</button>
+            </td>
+        </tr>
+    }
+</table>
+
+<script>
+    function cargarDisponibles() {
+        var url = "@Url.Action("Disponibles","Vuelos")";
+        var idVuelo = document.getElementById("optVuelos").value;
+        var data = { idVuelo: idVuelo };
+        if (idVuelo != 0) {
+            $.post(url, data).done(function (data) {
+                document.getElementById("lblDisponiblesFumadores").innerHTML = data["disponiblesFumadores"];
+                document.getElementById("lblDisponiblesNoFumadores").innerHTML = data["disponiblesNoFumadores"];
+            }).fail(function () {
+                alert("error")
+            });
+        } else {
+             document.getElementById("lblDisponiblesFumadores").innerHTML ="(Seleccione un vuelo)";
+             document.getElementById("lblDisponiblesNoFumadores").innerHTML = "(Seleccione un vuelo)";
+        }
+    };
+</script> 

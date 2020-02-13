@@ -1,0 +1,46 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Calificacion>
+
+@{
+    ViewBag.Title = "Calificaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calificaciones</h2>
+
+@* Boton donde se agrega las calificaciones *@
+<table style="width: 100%">
+    <tr>
+        <td style="width: 80%">
+        </td>
+        <td style="width: 16%" align="right">
+            <button type="button" class="btn btn-success" onclick="location.href='/Evaluaciones/AgregarCalificaciones'">Agregar Calificación</button>
+        </td>
+    </tr>
+</table>
+
+@* Tabla donde se muestra la lista de calificaciones *@
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre de la evaluación</th>
+            <th scope="col">Descripción de la evaluación</th>
+            <th scope="col">Cédula del calificante</th>
+            <th scope="col">Calificación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var calificacion in Model)
+            {
+                <tr>
+                    <th scope="col">@calificacion.codigoCalificacion</th>
+                    <th scope="col">@calificacion.nombreEvaluacion</th>
+                    <th scope="col">@calificacion.descripcionEvaluacion</th>
+                    <th scope="col">@calificacion.cedulaCalificante</th>
+                    <th scope="col">@calificacion.calificacion</th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model List<BCR.PracticaMinions4.ETL.Destino>
+@{
+    ViewBag.Title = "Destinos";
+}
+
+<h2>Destinos</h2>
+<table style="width: 100%">
+    <tr>
+        <td style="width: 80%" align="right">
+        </td>
+        <td style="width: 12%">
+            <button type="button" class="btn btn-success" onclick="location.href='/Vuelos/AgregarDestinos'">Agregar Destino</button>
+        </td>
+    </tr>
+</table>
+<table class="table table-bordered">
+    <thead class="bg-info">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Destino de salida</th>
+            <th scope="col">Destino de llegada</th>
+            <th scope="col">Modificar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var destino in Model)
+            {
+                <tr>
+                    <th scope="col">@destino.codigoDestino</th>
+                    <th scope="col">@destino.destinoSalida</th>
+                    <th scope="col">@destino.destinoLlegada</th>
+                    <th>
+                        <button type="button" class="btn btn-primary"
+                                onclick="location.href='@Url.Action("ModificarDestino", "Vuelos",
+                            new { idDestino = destino.codigoDestino })';return false;">
+                            Modificar
+                        </button>
+                    </th>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,5 @@
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.ETL\bin\Debug\BCR.PracticaMinions4.ETL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.ETL\bin\Debug\BCR.PracticaMinions4.ETL.pdb
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.ETL\obj\Debug\BCR.PracticaMinions4.ETL.csprojAssemblyReference.cache
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.ETL\obj\Debug\BCR.PracticaMinions4.ETL.dll
+C:\Repositorios Visual\J Jimenez\GB.Jeison.Jimenez\Código\BCR.PracticaMinions4.sln\BCR.PracticaMinions4.ETL\obj\Debug\BCR.PracticaMinions4.ETL.pdb

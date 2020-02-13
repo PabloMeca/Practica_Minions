@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCR.PracticaMinions4.UIL", "BCR.PracticaMinions4.UIL\BCR.PracticaMinions4.UIL.csproj", "{BE872CA8-F2E9-4936-AFDF-C8EC93FB7DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCR.PracticaMinions4.DAL", "BCR.PracticaMinions4.DAL\BCR.PracticaMinions4.DAL.csproj", "{BA05FE63-6F77-4C09-8F81-AFD61D7154A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCR.PracticaMinions4.BLL", "BCR.PracticaMinions4.BLL\BCR.PracticaMinions4.BLL.csproj", "{F70EF94D-03D5-4BCE-8A19-369EF0E07533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCR.PracticaMinions4.ETL", "BCR.PracticaMinions4.ETL\BCR.PracticaMinions4.ETL.csproj", "{4CD6585C-4B0B-47E4-968F-1F691F370CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCR.PracticaMinions4.LIL", "BCR.PracticaMinions4.LIL\BCR.PracticaMinions4.LIL.csproj", "{4033EB80-19AF-48A3-BDE1-A751D1158368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE872CA8-F2E9-4936-AFDF-C8EC93FB7DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE872CA8-F2E9-4936-AFDF-C8EC93FB7DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE872CA8-F2E9-4936-AFDF-C8EC93FB7DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE872CA8-F2E9-4936-AFDF-C8EC93FB7DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA05FE63-6F77-4C09-8F81-AFD61D7154A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA05FE63-6F77-4C09-8F81-AFD61D7154A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA05FE63-6F77-4C09-8F81-AFD61D7154A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA05FE63-6F77-4C09-8F81-AFD61D7154A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70EF94D-03D5-4BCE-8A19-369EF0E07533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70EF94D-03D5-4BCE-8A19-369EF0E07533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70EF94D-03D5-4BCE-8A19-369EF0E07533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70EF94D-03D5-4BCE-8A19-369EF0E07533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD6585C-4B0B-47E4-968F-1F691F370CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD6585C-4B0B-47E4-968F-1F691F370CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD6585C-4B0B-47E4-968F-1F691F370CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD6585C-4B0B-47E4-968F-1F691F370CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4033EB80-19AF-48A3-BDE1-A751D1158368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4033EB80-19AF-48A3-BDE1-A751D1158368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4033EB80-19AF-48A3-BDE1-A751D1158368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4033EB80-19AF-48A3-BDE1-A751D1158368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC13D9F4-AB75-40A1-820F-C83E54F098FA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/jeisonjimenez
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BCR.PracticaMinions4.UIL\\BCR.PracticaMinions4.UIL.csproj
+		SccProjectName1 = BCR.PracticaMinions4.UIL
+		SccLocalPath1 = BCR.PracticaMinions4.UIL
+		SccProjectUniqueName2 = BCR.PracticaMinions4.DAL\\BCR.PracticaMinions4.DAL.csproj
+		SccProjectName2 = BCR.PracticaMinions4.DAL
+		SccLocalPath2 = BCR.PracticaMinions4.DAL
+		SccProjectUniqueName3 = BCR.PracticaMinions4.BLL\\BCR.PracticaMinions4.BLL.csproj
+		SccProjectName3 = BCR.PracticaMinions4.BLL
+		SccLocalPath3 = BCR.PracticaMinions4.BLL
+		SccProjectUniqueName4 = BCR.PracticaMinions4.ETL\\BCR.PracticaMinions4.ETL.csproj
+		SccProjectName4 = BCR.PracticaMinions4.ETL
+		SccLocalPath4 = BCR.PracticaMinions4.ETL
+		SccProjectUniqueName5 = BCR.PracticaMinions4.LIL\\BCR.PracticaMinions4.LIL.csproj
+		SccProjectName5 = BCR.PracticaMinions4.LIL
+		SccLocalPath5 = BCR.PracticaMinions4.LIL
+	EndGlobalSection
+EndGlobal

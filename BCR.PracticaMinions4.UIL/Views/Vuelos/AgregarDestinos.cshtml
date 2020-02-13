@@ -1,0 +1,36 @@
+﻿@model BCR.PracticaMinions4.ETL.Destino
+
+@{
+    ViewBag.Title = "AgregarDestinos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Destinos</h2>
+
+<table style="width: 35%">
+    @using (Html.BeginForm("InsertarDestino", "Vuelos", FormMethod.Post))
+    {
+        <tr>
+            <td align="left">
+                Destino Salida:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtDestinoSalida" class="form-control"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                Destino Llegada:
+            </td>
+            <td style="width: 50%">
+                <input type="text" name="txtDestinoLlegada" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="width: 40%">
+                <button type="submit" class="btn btn-success">Insertar Destino</button>
+            </td>
+        </tr>
+    }
+</table>
+

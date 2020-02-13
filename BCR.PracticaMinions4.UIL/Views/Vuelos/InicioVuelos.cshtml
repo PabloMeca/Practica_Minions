@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Inicio Vuelos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<br />
+<table>
+    <tr>
+        <td>
+            <button type="button" class="btn btn-info btn-lg" onclick="location.href='/Vuelos/Destinos'">Destinos</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-info btn-lg" onclick="location.href='/Vuelos/Vuelos'">Vuelos</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-info btn-lg" onclick="location.href='/Vuelos/Reservas'">Reservas</button>
+        </td>
+    </tr>
+</table>
